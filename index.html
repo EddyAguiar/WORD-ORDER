@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Order Flashcards - A1-A2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .header {
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .flashcard {
+      background: #ffffff;
+      border-left: 6px solid #2ecc71;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 320px;
+      margin: 15px;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .flashcard:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .content {
+      display: none;
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .content span {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .question {
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+
+    .answer {
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    .explanation {
+      color: #2980b9;
+    }
+
+    .examples {
+      color: #8e44ad;
+    }
+
+    .step {
+      margin-top: 8px;
+      padding-left: 10px;
+    }
+
+    .step::before {
+      content: '✅';
+      margin-right: 6px;
+    }
+
+    .final-tip {
+      width: 100%;
+      max-width: 700px;
+      background: #dff0d8;
+      border-left: 6px solid #3c763d;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🎓 Aula: Ordem das Palavras em Inglês (Word Order)</h1>
+    <p>🔤 <strong>Nível:</strong> A1-A2</p>
+    <p>🎯 <strong>Foco:</strong> Estrutura correta de frases afirmativas, negativas, interrogativas e uso de advérbios.</p>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Qual é a ordem mais comum das palavras em uma frase afirmativa em inglês?</div>
+    <div class="content">
+      <span class="answer step">Sujeito + Verbo + Complemento</span>
+      <span class="explanation step">Sujeito (quem faz) → Verbo (o que faz) → Complemento (o quê/onde/quando). Essa ordem não muda.</span>
+      <span class="examples step">I like pizza. / She drinks coffee every morning. / We play soccer on weekends.</span>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Como fica a ordem das palavras em perguntas com verbos auxiliares (do/does)?</div>
+    <div class="content">
+      <span class="answer step">Verbo auxiliar + Sujeito + Verbo principal + Complemento</span>
+      <span class="explanation step">Usamos do/does antes do sujeito. O verbo principal vem na forma base (sem "s").</span>
+      <span class="examples step">Do you like chocolate? / Does she live in Brazil? / Do they play football?</span>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Como fica a ordem das palavras em frases negativas com o verbo to be?</div>
+    <div class="content">
+      <span class="answer step">Sujeito + Verbo "to be" + not + Complemento</span>
+      <span class="explanation step">O verbo "to be" (am, is, are) já é auxiliar. A negação vem com "not" após ele.</span>
+      <span class="examples step">I am not tired. / He is not at home. / They are not ready.</span>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Onde colocamos advérbios de frequência (always, usually, never)?</div>
+    <div class="content">
+      <span class="answer step">Entre o sujeito e o verbo principal (exceto o "to be")</span>
+      <span class="explanation step">Advérbios de frequência vêm antes do verbo principal e depois do verbo "to be".</span>
+      <span class="examples step">I always eat breakfast. / She never studies at night. / He is usually late. / We are always happy.</span>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Qual é a ordem correta para frases com objetos diretos e indiretos?</div>
+    <div class="content">
+      <span class="answer step">Sujeito + Verbo + Objeto Indireto + Objeto Direto</span>
+      <span class="explanation step">O objeto indireto (para quem) vem antes do direto (o quê).</span>
+      <span class="examples step">I gave her a gift. / He told me a story. / She sent us an email.</span>
+    </div>
+  </div>
+
+  <div class="flashcard" onclick="reveal(this)">
+    <div class="question">Como organizar a ordem de palavras quando incluímos tempo e lugar?</div>
+    <div class="content">
+      <span class="answer step">Sujeito + Verbo + Complemento + Lugar + Tempo</span>
+      <span class="explanation step">O lugar geralmente vem antes do tempo na frase.</span>
+      <span class="examples step">I studied at home last night. / She works in London every day. / They arrived at the airport at 7 PM.</span>
+    </div>
+  </div>
+
+  <div class="final-tip">
+    <h3>🧠 Dica Final</h3>
+    <p><strong>✅ Memorize a estrutura padrão:</strong></p>
+    <p>Sujeito + Verbo + Objeto + Lugar + Tempo + Advérbio</p>
+    <p><strong>✅ Exemplo completo:</strong></p>
+    <p>I (sujeito) → read (verbo) → a book (objeto) → at the library (lugar) → yesterday (tempo) → quietly (advérbio)</p>
+    <p><strong>👉 Frase:</strong> I read a book at the library yesterday quietly. ✅</p>
+  </div>
+
+  <script>
+    function reveal(card) {
+      const content = card.querySelector('.content');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
